@@ -19,11 +19,13 @@ This project provides users with a smooth and efficient way to make informed buy
 1. Navigate to the client directory:
    ```bash
    cd ./client
+   npm run dev
 
 ### **Server (Backend)**
 1. Navigate to the client directory:
    ```bash
    cd ./server
+   npm start
    
 ---
 
@@ -36,7 +38,7 @@ This project provides users with a smooth and efficient way to make informed buy
 2. **Server Setup**:
    - Navigate to the `./server` folder.
    - Run `npm install` to install backend dependencies.
-   - Run `npm start` to start the backend server.
+   - Run `npm start` to start the backend server using nodemon.
 
 ---
 
