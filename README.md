@@ -1,7 +1,7 @@
-# **Price Comparison Website**
+# **Gadgets Comparison Website**
 
 ## **About the Project**
-The **Price Comparison Website** allows users to compare prices, images, and product links from top e-commerce platforms, such as Amazon, Flipkart, and eBay, using third-party APIs. This project avoids web scraping by utilizing trusted third-party APIs to fetch product details, ensuring real-time and accurate data.
+The **Gadgets Comparison Website** allows users to compare prices, images, and product links from top e-commerce platforms, such as Amazon, Flipkart, and eBay, using third-party APIs. This project avoids web scraping by utilizing trusted third-party APIs to fetch product details, ensuring real-time and accurate data.
 
 Key features of the website:
 - **Price Comparison**: Compare prices of the same product across multiple platforms.
