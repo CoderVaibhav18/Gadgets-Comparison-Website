@@ -20,6 +20,10 @@ This project provides users with a smooth and efficient way to make informed buy
    ```bash
    cd ./client
 
+### **Server (Backend)**
+1. Navigate to the client directory:
+   ```bash
+   cd ./server
    
 ---
 
