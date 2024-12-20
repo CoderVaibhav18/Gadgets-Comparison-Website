@@ -1,0 +1,59 @@
+.hero {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  font-weight: 300;
+  margin: 25px 0;
+}
+
+.hero .para {
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #ff6f61;
+}
+
+.searchContainer {
+  margin-top: 50px;
+  width: 100%;
+
+  p{
+    margin: 8px 0;
+    font-size: .8rem;
+    font-weight: 200;
+  }
+}
+
+.searchContainer input {
+  height: 40px;
+  width: 50%;
+  padding: 10px;
+  width: 400px;
+  color: black;
+  background: #fff;
+  outline: none;
+  border: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.searchContainer button{
+  height: 40px;
+  padding: 0 10px;
+  color: #fff;
+  cursor: pointer;
+  background: blueviolet;
+  outline: none;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.loader{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

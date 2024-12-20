@@ -1,0 +1,59 @@
+/* General Footer Styling */
+.footer {
+  background: #000;
+  color: #ffffff;
+  padding: 30px 20px;
+}
+
+.left h1 {
+  display: flex;
+  background: #000;
+  justify-content: center;
+  font-size: 1.5rem;
+  span{
+    background: #000;
+    color: #ff6f61;
+  }
+}
+
+
+/* Footer Bottom Section */
+.footerBottom {
+  /* margin-top: 30px; */
+  background: #000;
+  text-align: center;
+  border-top: 1px solid azure;
+  padding: 5px;
+  font-size: 14px;
+  color: #777;
+  margin-top: 30px;
+  font-weight: 300;
+}
+
+.footerBottom div{
+  background: #000;
+  margin-top: 30px;
+}
+.copyright{
+  background: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+.para{
+  background: #000;
+  margin-top: 15px;
+}
+
+.footerBottom p:last-child {
+  color: #ff6f61;  /*Highlight for "Made with ❤️" */
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

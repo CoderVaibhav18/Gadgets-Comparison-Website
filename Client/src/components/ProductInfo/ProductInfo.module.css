@@ -1,0 +1,73 @@
+.container{
+  width: 100%;
+  max-width: 92rem;
+  margin: 0 auto;
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+  gap: 8px;
+  /* width: 150px; */
+}
+.firstSection{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin: 4rem 0;
+}
+.tableSection{
+  padding: 0 80px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders merge for a clean look */
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+  background-color: #ffffff; /* Overall table background */
+}
+
+.head {
+  background-color: #007bff; /* Primary blue color for header */
+  color: #ffffff; /* White text for contrast */
+  font-weight: bold;
+}
+
+.th th {
+  padding: 12px 15px; /* Padding for header cells */
+  border-bottom: 2px solid #0056b3; /* Darker blue border for header cells */
+}
+
+.td td {
+  padding: 10px 15px; /* Padding for data cells */
+  border-bottom: 1px solid #ddd; /* Subtle border for rows */
+  font-weight: 400;
+}
+
+.td:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+.td:nth-child(odd) {
+  background-color: #fefefe; /* Slightly off-white for odd rows */
+}
+
+.td:hover {
+  background-color: #e9ecef; /* Highlight row on hover */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.td a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold;
+}
+
+.td a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+.table td:first-child {
+  font-weight: bold; /* Highlight the first column (Sr. No.) */
+  color: #333; /* Darker text color for readability */
+}
