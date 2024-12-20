@@ -19,3 +19,22 @@ This project provides users with a smooth and efficient way to make informed buy
 1. Navigate to the client directory:
    ```bash
    cd ./client
+
+   
+---
+
+### **Instructions Summary**
+1. **Client Setup**:
+   - Navigate to the `./client` folder.
+   - Run `npm install` to install frontend dependencies.
+   - Run `npm run dev` to start the frontend development server.
+
+2. **Server Setup**:
+   - Navigate to the `./server` folder.
+   - Run `npm install` to install backend dependencies.
+   - Run `npm start` to start the backend server.
+
+---
+
+This should set you up with a clear **README.md** file for your GitHub repository. Let me know if you need further adjustments! 😊
+
