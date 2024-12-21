@@ -64,38 +64,6 @@ app.get("/api/products", async (req, res) => {
   }
 });
 
-/**
- * @route GET /api/flipkart
- * @description Fetches products from Flipkart-like API
- */
-app.get("/api/flipkart", async (req, res) => {
-  const options = {
-    method: "GET",
-    url: "https://real-time-amazon-data.p.rapidapi.com/seller-products",
-    params: {
-      product_title: "iphone 14",
-      seller_id: "A02211013Q5HP3OMSZC7W",
-      country: "IN",
-      page: "1",
-      sort_by: "RELEVANCE",
-    },
-    headers: {
-      "x-rapidapi-key": process.env.FLIPKART_API_KEY,
-      "x-rapidapi-host": "real-time-amazon-data.p.rapidapi.com",
-    },
-  };
-
-  try {
-    const { data } = await axios.request(options);
-    res.status(200).json(data);
-  } catch (error) {
-    console.error("Error fetching Flipkart data:", error.response?.data || error.message);
-    res.status(500).json({
-      message: "Failed to fetch Flipkart data",
-      error: error.response?.data || error.message,
-    });
-  }
-});
 
 // Start the server
 app.listen(PORT, () => {
