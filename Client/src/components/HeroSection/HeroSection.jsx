@@ -5,23 +5,26 @@ import ProductInfo from "../ProductInfo/ProductInfo";
 import { ThreeDots } from "react-loader-spinner";
 
 const HeroSection = () => {
-  const [flipkartProduct, setFlipkartProduct] = useState(null);
+  const [products, setProducts] = useState(null);
   const [formData, setFormData] = useState("");
-  // const [inputValue, setInputValue] = useState("")
   const [error, setError] = useState(null);
-  // const [img, setImg] = useState(null)
-  const [loading, setLoading] = useState(false); // Add loading state
+  const [loading, setLoading] = useState(false);
 
+  // Function to handle API fetch on button click
   const handleSearchClick = async (event) => {
-    event.preventDefault();
-    console.log(formData);
-    setLoading(true); // Start loading before fetching data
-    console.log("Searching for:", formData);
+    event.preventDefault(); // Prevent form submission behavior
+    if (!formData.trim()) {
+      setError("Please enter a search term."); // Show error if input is empty
+      setProducts(null);
+      return;
+    }
+
+    setLoading(true); // Start loading before the API call
     try {
       const response = await axios.get(
-        `/api/flipkart?search=${formData.split(" ").join("+")}`
+        `/api/products?k=${formData.split(" ").join("+")}`
       );
-      setFlipkartProduct(response.data); // Update results with API data
+      setProducts(response.data); // Update products state with fetched data
       setError(null); // Clear any previous errors
     } catch (err) {
       console.error("Error fetching data:", err);
@@ -31,9 +34,10 @@ const HeroSection = () => {
     }
   };
 
+  // Function to handle input changes
   const handleInputChange = (e) => {
-    e.preventDefault();
-    setFormData(e.target.value);
+    setFormData(e.target.value); // Update formData state
+    setError(null); // Clear error when user starts typing
   };
 
   return (
@@ -73,10 +77,9 @@ const HeroSection = () => {
               wrapperClass=""
             />
           </div>
-        )}{" "}
-        {/* Loader message */}
-        {!loading && (
-          <ProductInfo flipkartProduct={flipkartProduct} formData={formData} />
+        )}
+        {!loading && products && (
+          <ProductInfo products={products} formData={formData} />
         )}
       </div>
     </section>

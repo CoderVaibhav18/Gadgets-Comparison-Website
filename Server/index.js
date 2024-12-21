@@ -5,7 +5,11 @@ const app = express();
 const axios = require("axios");
 const port = process.env.PORT;
 
-app.get("/api/ebay", async (req, res) => {
+app.get("/", (req, res) => {
+  return res.send("Server has started!...");
+});
+
+app.get("/api/products", async (req, res) => {
   const { k } = req.query;
   console.log(k);
 
@@ -13,7 +17,7 @@ app.get("/api/ebay", async (req, res) => {
     method: "GET",
     url: "https://real-time-product-search.p.rapidapi.com/search-v2",
     params: {
-      q: k,
+      q: k || "iphone 14",
       country: "us",
       language: "en",
       page: "1",
@@ -45,10 +49,10 @@ app.get("/api/flipkart", async (req, res) => {
     url: "https://real-time-amazon-data.p.rapidapi.com/seller-products",
     params: {
       product_title: "iphone 14",
-      seller_id: 'A02211013Q5HP3OMSZC7W',
+      seller_id: "A02211013Q5HP3OMSZC7W",
       country: "IN",
-      page: '1',
-      sort_by: 'RELEVANCE'
+      page: "1",
+      sort_by: "RELEVANCE",
     },
     headers: {
       "x-rapidapi-key": "a244fd19b8mshfec96f7cc65658ep13d980jsn79437390dcc5",
