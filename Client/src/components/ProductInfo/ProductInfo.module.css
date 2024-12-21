@@ -2,11 +2,13 @@
   width: 100%;
   max-width: 92rem;
   margin: 0 auto;
-  display: flex;
-  /* text-align: center; */
-  justify-content: center;
-  gap: 8px;
-  /* width: 150px; */
+  /* display: flex;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 4 equal columns */
+  flex-wrap: wrap;
+  gap: 10px; /*Space between grid items*/
+  
 }
 .firstSection{
   display: flex;

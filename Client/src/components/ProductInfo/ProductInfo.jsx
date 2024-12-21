@@ -1,20 +1,19 @@
 import PropTypes from "prop-types";
 import styles from "./ProductInfo.module.css";
-// import ProductCart from "../ProductCart/ProductCart";
+import ProductCart from "../ProductCart/ProductCart";
 // import { useEffect } from "react";
 // import axios from "axios";
 
 const ProductInfo = ({ products, formData }) => {
-  console.log(`input value: ${formData}`);
-  console.log(`data from prop: ${products}`);
-  
+  console.log(formData);
+  console.log(products);
 
   return (
     <section className={styles.container}>
       {/* Flipkart Card */}
-      {/* {flipkartProduct && flipkartProduct.length > 0 && (
-        // <ProductCart ProductDetails={flipkartProduct} title="Flipkart" />
-      )} */}
+      {products && products.length > 0 && (
+        <ProductCart ProductDetails={products} />
+      )}
     </section>
   );
 };

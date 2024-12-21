@@ -25,7 +25,9 @@ const HeroSection = () => {
         `/api/products?k=${formData.split(" ").join("+")}`
       );
       setProducts(response.data); // Update products state with fetched data
-      setError(null); // Clear any previous errors
+      console.log(products);
+
+      // setError(null); // Clear any previous errors
     } catch (err) {
       console.error("Error fetching data:", err);
       setError("Failed to fetch data. Please try again."); // Display error message
