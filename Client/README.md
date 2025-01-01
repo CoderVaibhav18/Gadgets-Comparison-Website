@@ -1,5 +1,5 @@
 # React + Vite
 
-This template provides 
+This template 
  
 
