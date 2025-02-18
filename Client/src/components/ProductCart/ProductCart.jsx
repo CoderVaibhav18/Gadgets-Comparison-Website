@@ -39,7 +39,7 @@ const ProductCart = ({ ProductDetails }) => {
             </p>
             <div className={styles.author}>
               <a
-                href={el.link || "#"}
+                href={el.offer.offer_page_url || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
