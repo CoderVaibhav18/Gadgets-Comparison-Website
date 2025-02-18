@@ -44,5 +44,5 @@ This project provides users with a smooth and efficient way to make informed buy
 
 ---
 
-This should set you up with a clear **README.md** file for your GitHub repository. Let me know if you need further adjustments! 😊
+This should set you up with a clear **README.md** file for your GitHub repository. Let me know if you need further adjustments! Thank you😊
 
