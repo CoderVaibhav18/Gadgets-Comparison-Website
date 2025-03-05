@@ -44,7 +44,7 @@ const HeroSection = () => {
 
   return (
     <section className={styles.hero} id="Home">
-      <h1>Find the Best Gadgets at the Best Prices</h1>
+      <h1 className="text-white">Find the Best Gadgets at the Best Prices</h1>
       <p className={styles.para}>
         Compare prices from multiple retailers and save money!
       </p>
@@ -55,9 +55,10 @@ const HeroSection = () => {
             type="text"
             placeholder="Search for gadgets..."
             onChange={handleInputChange}
+            className={styles.input}
             value={formData}
           />
-          <button onClick={handleSearchClick}>Search</button>
+          <button onClick={handleSearchClick} className='p-2 px-4'>Search</button>
         </div>
       </div>
       <div>

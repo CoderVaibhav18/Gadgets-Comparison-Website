@@ -1,17 +1,8 @@
-import About from "./components/About/About";
-import Footer from "./components/Footer/Footer";
-import HeroSection from "./components/HeroSection/HeroSection";
-import Navbar from "./components/Navbar/Navbar";
+import AppRoutes from "./routes/AppRoutes";
+import 'remixicon/fonts/remixicon.css'
 
 function App() {
-  return (
-    <div className="container">
-      <Navbar />
-      <HeroSection />
-      <About />
-      <Footer />
-    </div>
-  );
+  return <AppRoutes />;
 }
 
 export default App;

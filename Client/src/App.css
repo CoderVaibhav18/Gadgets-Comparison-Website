@@ -1,11 +1,19 @@
-.container{
-  padding: 0 30px;
+@import "tailwindcss";
+
+.container {
+  padding: 0 0;
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background: #181c14;
+  color: azure;
 }
-/* From Uiverse.io by alexmaracinaru */ 
+/* From Uiverse.io by alexmaracinaru */
 .card {
   width: 190px;
   background: white;
-  padding: .4em;
+  padding: 0.4em;
   border-radius: 6px;
   margin-top: 50px;
 }
@@ -57,7 +65,7 @@
 .name:hover {
   cursor: pointer;
 }
-.author a{
+.author a {
   text-decoration: none;
   font-size: 1rem;
   color: red;
