@@ -1,7 +1,6 @@
 const userModel = require("../models/userModel");
 
 const createUserService = async ({ name, email, password }) => {
-
   if (!name) {
     throw new Error("Name is required");
   }
@@ -19,8 +18,20 @@ const createUserService = async ({ name, email, password }) => {
     email,
     password: hashedPassword,
   });
-  
+
   return user;
 };
 
-module.exports = { createUserService };
+const loginUserService = async ({ email, password }) => {
+  if (!email) {
+    throw new Error("Email is required");
+  }
+  if (!password) {
+    throw new Error("Password is required");
+  }
+
+  const user = await userModel.findOne({ email }).select("+password");
+  return user;
+};
+
+module.exports = { createUserService, loginUserService };

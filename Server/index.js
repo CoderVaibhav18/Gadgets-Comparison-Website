@@ -1,14 +1,13 @@
-// Load environment variables
 require("dotenv").config();
 
-// Import dependencies
 const express = require("express");
-const morgan = require("morgan"); // For logging HTTP requests
-const helmet = require("helmet"); // For enhancing security
+const morgan = require("morgan");
+const helmet = require("helmet");
+const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
 const getProduct = require("./routes/productRoute");
 const userRoutes = require("./routes/userRoute");
-const cookieParser = require("cookie-parser");
 const { dbConnection } = require("./db/db");
 
 // Initialize Express app
@@ -21,6 +20,7 @@ app.use(helmet()); // Adds security headers
 app.use(morgan("dev")); // Logs HTTP requests
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 
 // mongodb connection
 dbConnection();
