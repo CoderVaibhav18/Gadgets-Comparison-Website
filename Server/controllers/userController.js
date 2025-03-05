@@ -3,6 +3,7 @@ const {
   createUserService,
   loginUserService,
 } = require("../sevices/userService");
+const redisClient = require('../sevices/redisService');
 
 const userSignup = async (req, res) => {
   const errors = validationResult(req);
@@ -45,4 +46,21 @@ const userLogin = async (req, res) => {
   }
 };
 
-module.exports = { userSignup, userLogin };
+const userProfie = (req, res) => {
+  return res.status(200).json(req.user);
+};
+
+const userlogout = (req, res) => {
+  
+  try {
+    
+    const token = req.cookies?.token || req.headers.Authorization?.split(' ')[1]
+    redisClient.set(token, 'logout', 'EX', 60*60*24)
+    return res.status(200).json({msg: "logout successfully"})
+  } catch (err) {
+    return res.status(400).json({msg: err.message})
+  }
+
+};
+
+module.exports = { userSignup, userLogin, userProfie, userlogout };
