@@ -1,7 +1,7 @@
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { userContextData } from "../context/userContext";
+// import { userContextData } from "../context/userContext";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -9,8 +9,6 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-  const { setUser } = useContext(userContextData);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -23,9 +21,8 @@ const Signup = () => {
       })
       .then((res) => {
         if (res.status === 201) {
-          setUser(res.data.user);
           localStorage.setItem("token", res.data.token);
-          alert('user created')
+          alert("user created");
           navigate("/");
         }
       })

@@ -5,12 +5,10 @@ import "./index.css";
 import "remixicon/fonts/remixicon.css";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import UserContext from "./context/userContext.jsx";
+// import UserContext from "./context/userContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <UserContext>
-      <App />
-    </UserContext>
+    <App />
   </StrictMode>
 );

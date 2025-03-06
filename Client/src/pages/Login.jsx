@@ -1,6 +1,5 @@
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { userContextData } from "../context/userContext";
 import axios from "axios";
 
 const Login = () => {
@@ -8,10 +7,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-  const { user, setUser } = useContext(userContextData);
-
-  console.log(user);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -22,8 +17,7 @@ const Login = () => {
         password: password,
       })
       .then((res) => {
-        if (res.status === 200) {         
-          setUser(res.data.user);        
+        if (res.status === 200) {
           localStorage.setItem("token", res.data.token);
           alert("user login");
           navigate("/");

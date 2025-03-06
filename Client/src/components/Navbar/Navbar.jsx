@@ -1,12 +1,16 @@
-// import React from 'react'
-import { useState } from "react";
+import {  useState } from "react";
 import styles from "./Navbar.module.css";
 import { HiBars3BottomLeft } from "react-icons/hi2";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+ 
+
   const handleBtn = () => {
     setShowMenu(!showMenu);
   };
+
   return (
     <header className={styles.header}>
       <section className={styles.navbar}>
@@ -20,16 +24,13 @@ const Navbar = () => {
         >
           <ul className={styles.list}>
             <li className={styles.item}>
-              <a href="#Home">Home</a>
+              <Link href="#Home">Home</Link>
             </li>
             <li className={styles.item}>
-              <a href="#about">About</a>
+              <Link href="#about">About</Link>
             </li>
-            <li className={styles.item}>
-              <a href="#">Contact</a>
-            </li>
-            <li className={styles.item}>
-              <a href="#">Services</a>
+            <li>
+              <Link to="/logout">Logout</Link>
             </li>
           </ul>
         </nav>
